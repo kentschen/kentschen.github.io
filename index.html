@@ -7,42 +7,39 @@ title: Home | Kent S. Chen
 			
 			<p>Hi, Welcome to the official site of Kent S. Chen. I'm a <em> world-class traveler </em>, <em> vlogger </em>, and <em> marathon-finisher </em>,  <a href="/about">Read about my life story...</a></p>
 	
-		<style>
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-}
 
-div.gallery:hover {
-    border: 1px solid #777;
-}
-
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-</style>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="img_fjords.jpg" style="width:100%">
+  <img class="mySlides" src="img_lights.jpg" style="width:100%">
+  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+  <img class="mySlides" src="img_forest.jpg" style="width:100%">
 
-<div class="gallery">
-  <a target="_blank" href="/files/me_20180219.jpg">
-    <img src="files/me_20180219.jpg" alt="Fjords" width="300" height="200">
-  </a>
-  <div class="desc">The Big C, Berkeley, CA</div>
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 
-<div class="gallery">
-  <a target="_blank" href="files/me_20180318.jpg">
-    <img src="files/me_20180319.jpg" alt="Forest" width="300" height="200">
-  </a>
-  <div class="desc">First ever full marathon</div>
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 4000); // Change image every 4 seconds
+}
+</script>
+
+
+
+
 
 </div> 
